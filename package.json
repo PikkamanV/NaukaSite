@@ -1,0 +1,54 @@
+{
+  "name": "nauka-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start",
+    "export": "nuxt-ts export",
+    "serve": "nuxt-ts serve",
+    "lint:js": "eslint --ext .ts,.js,.vue --ignore-path .gitignore .",
+    "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
+    "lint": "yarn lint:js && yarn lint:style"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint",
+    "*.{css,vue}": "stylelint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.11.1",
+    "@nuxt/typescript-runtime": "^2.0.0",
+    "@nuxtjs/pwa": "^3.3.3",
+    "nuxt": "^2.14.12"
+  },
+  "devDependencies": {
+    "@nuxt/typescript-build": "^2.0.3",
+    "@nuxtjs/eslint-config": "^5.0.0",
+    "@nuxtjs/eslint-config-typescript": "^5.0.0",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/stylelint-module": "^4.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.16.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-vue": "^7.3.0",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.3",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.0",
+    "stylelint": "^13.8.0",
+    "stylelint-config-recess-order": "^2.3.0",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": "3000"
+    }
+  }
+}
