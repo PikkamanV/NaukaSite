@@ -17,6 +17,10 @@ export default {
         hid: 'description',
         name: 'description',
         content: process.env.npm_package_description || ''
+      },
+      {
+        name: 'google-site-verification',
+        content: 'ORbV0Nh2A4ODCeHJvsPYG4hazkM4b6kjmqYhE011o1M'
       }
     ],
     link: [
