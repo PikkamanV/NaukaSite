@@ -45,6 +45,14 @@ export default {
   grid-column: 3 / 4;
 }
 
+.nuxt-content img {
+  max-width: 100%;
+}
+
+.nuxt-content a {
+  word-break: break-word;
+}
+
 @media (max-width: 768px) {
   .post-container {
     display: grid;
