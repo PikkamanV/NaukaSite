@@ -105,8 +105,10 @@ GitHubと連携し、デプロイするリポジトリを選ぶ。
 ![fleekをENSのcontrollerにする](/posts/fleek-ens/fleek6.png)
 ![ウォレット選択](/posts/fleek-ens/fleek7.png)
 
-こうしてウォレットを使っていれば `https://nauka.eth` でアクセスできるようになった。ウォレットがなくても[EthDNS](http://ethdns.xyz/)によって `https://nauka.eth.link/` でサイトにアクセスできるようになっている。
+こうしてウォレットを使っていれば https://nauka.eth でアクセスできるようになった。ウォレットがなくても[EthDNS](http://ethdns.xyz/)によって https://nauka.eth.link/ でサイトにアクセスできるようになっている。
+
+ちなみに、controllerをfleekに設定するとENSアプリで自分ではサブドメインの設定などができなくなるので注意した方がよい。必要であれば適宜ドメインを分けることになるだろう。
 
 ### おまけ
 `SETTINGS` の `Custom Domains` からは通常のDNSでドメインを指定することもできる。
-持っているドメインあるいはサブドメイン（今回は `www.nauka.moe` ）を入力するとCNAMEレコードを指定されるので、Xdomainの管理画面から設定すればアクセスできるようになった。
+持っているドメインあるいはサブドメイン（今回は `www.nauka.moe` ）を入力するとCNAMEレコードを指定されるので、`.moe` ドメインXdomainの管理画面から設定すればアクセスできるようになった。
