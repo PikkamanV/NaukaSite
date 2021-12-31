@@ -27,6 +27,11 @@ export default {
       prev,
       next
     }
+  },
+  head () {
+    return {
+      title: this.post.title + ' - はやく現実になりたい' // TODO: 共通化して
+    }
   }
 }
 </script>
