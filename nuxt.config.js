@@ -59,7 +59,8 @@ export default {
   modules: [
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt/content
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/sitemap'
   ],
   /*
    ** Content module configuration
@@ -70,5 +71,14 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {}
+  build: {},
+  sitemap: {
+    hostname: 'https://www.nauka.moe/',
+    routes: async () => {
+      const { $content } = require('@nuxt/content')
+      const posts = await $content('posts').only(['path']).fetch()
+
+      return posts.map(post => post.path)
+    }
+  }
 }
