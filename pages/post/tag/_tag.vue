@@ -28,7 +28,7 @@ export default {
   },
   head () {
     return {
-      title: 'タグ「' + this.tag + '」の記事一覧 - はやく現実になりたい' // TODO: 共通化して
+      title: 'タグ「' + this.tag + '」の記事一覧 - はやく現実になりたい！' // TODO: 共通化して
     }
   },
   computed: {

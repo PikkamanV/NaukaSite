@@ -24,7 +24,10 @@
     "@nuxt/content": "^1.15.1",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/sitemap": "^2.4.0",
-    "nuxt": "^2.15.8"
+    "mikanjs": "^1.0.14",
+    "nuxt": "^2.15.8",
+    "sharp": "^0.31.2",
+    "text-to-svg": "^3.1.5"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^2.1.0",
@@ -32,6 +35,8 @@
     "@nuxtjs/eslint-config-typescript": "^5.0.0",
     "@nuxtjs/eslint-module": "^3.1.0",
     "@nuxtjs/stylelint-module": "^4.1.0",
+    "@types/sharp": "^0.31.0",
+    "@types/text-to-svg": "^3.1.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
     "eslint-plugin-nuxt": "^2.0.0",
@@ -43,11 +48,5 @@
     "stylelint": "^13.13.1",
     "stylelint-config-recess-order": "^2.3.0",
     "stylelint-config-standard": "^20.0.0"
-  },
-  "config": {
-    "nuxt": {
-      "host": "0.0.0.0",
-      "port": "3000"
-    }
   }
 }

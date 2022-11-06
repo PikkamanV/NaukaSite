@@ -4,13 +4,13 @@
       実はえっちなサイトかもしれない
     </div>
     <div class="cory-rignt">
-      ©2021 はやく現実になりたい All rights reserved.
+      ©2021 はやく現実になりたい！ All rights reserved.
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-@import '~/assets/styles/color.scss';
+@import '@/assets/styles/color.scss';
 
 .footer-container {
   display: grid;

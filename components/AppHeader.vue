@@ -2,7 +2,7 @@
   <div class="header-container">
     <nuxt-link to="/" class="logo">
       <div class="text">
-        はやく現実になりたい
+        はやく現実になりたい！
       </div>
     </nuxt-link>
     <v-menu class="menu" />
@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/styles/color.scss';
+@import '@/assets/styles/color.scss';
 
 .header-container {
   display: grid;
@@ -33,7 +33,7 @@ export default {
     grid-column: 2 / 3;
 
     .text {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       text-align: center;
     }
   }

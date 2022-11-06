@@ -30,7 +30,44 @@ export default {
   },
   head () {
     return {
-      title: this.post.title + ' - はやく現実になりたい' // TODO: 共通化して
+      title: this.post.title + ' - はやく現実になりたい！', // TODO: 共通化して
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.post.description
+        },
+        {
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'article'
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.post.title
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: this.$config.baseUrl + '/post/' + this.post.slug + '/'
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.post.description
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.$config.baseUrl + '/ogp/' + this.post.slug + '.png'
+        },
+        {
+          hid: 'twitter:card',
+          name: 'twitter:card',
+          content: 'summary_large_image'
+        }
+      ]
     }
   }
 }

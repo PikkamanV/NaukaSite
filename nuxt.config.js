@@ -9,7 +9,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: 'はやく現実になりたい' || '',
+    title: 'はやく現実になりたい！' || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -18,6 +18,13 @@ export default {
         name: 'description',
         content: process.env.npm_package_description || ''
       },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'はやく現実になりたい！' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'https://www.nauka.moe/' },
+      { hid: 'og:title', property: 'og:title', content: 'はやく現実になりたい！' },
+      { hid: 'og:description', property: 'og:description', content: '葉鍵とラ！と自作PCのオタク。エロゲーとアニメを見ながら好きな物をプログラミングで作って人生をやっていきたいが、なぜか不労所得がないのでWebやぶろっくちぇーん？の仕事で生活している。さらにソフトウェアエンジニアということになっているが、学位もないのでインディーズエンジニアである。' },
+      { hid: 'og:image', property: 'og:image', content: 'http://localhost:3000/ogp/common/title.png' },
+      { name: 'twitter:card', content: 'summary' },
       {
         name: 'google-site-verification',
         content: 'ORbV0Nh2A4ODCeHJvsPYG4hazkM4b6kjmqYhE011o1M'
@@ -60,7 +67,8 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@/modules/ogpGenerator'
   ],
   /*
    ** Content module configuration
@@ -80,5 +88,8 @@ export default {
 
       return posts.map(post => post.path)
     }
+  },
+  publicRuntimeConfig: {
+    baseUrl: process.env.baseUrl || 'http://localhost:3000'
   }
 }

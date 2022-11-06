@@ -88,3 +88,8 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# Generate OGP
+/static/ogp/*
+!/static/ogp/.gitkeep
+!/static/ogp/common
