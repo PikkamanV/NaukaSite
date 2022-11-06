@@ -50,7 +50,7 @@ export default {
         {
           hid: 'og:url',
           property: 'og:url',
-          content: this.$config.baseUrl + '/post/' + this.post.slug + '/'
+          content: this.$config.baseUrl + '/post/' + this.post.slug
         },
         {
           hid: 'og:description',

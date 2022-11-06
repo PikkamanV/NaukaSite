@@ -20,7 +20,7 @@ export default {
       },
       { hid: 'og:site_name', property: 'og:site_name', content: 'はやく現実になりたい！' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:url', property: 'og:url', content: 'https://www.nauka.moe/' },
+      { hid: 'og:url', property: 'og:url', content: 'https://www.nauka.moe' },
       { hid: 'og:title', property: 'og:title', content: 'はやく現実になりたい！' },
       { hid: 'og:description', property: 'og:description', content: '技術的だったりじゃなかったりするトピックについて書くピッカマンVのえっちな個人サイト' },
       { hid: 'og:image', property: 'og:image', content: 'https://www.nauka.moe/ogp/common/title.png' },
