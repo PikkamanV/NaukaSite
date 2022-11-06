@@ -1,20 +1,13 @@
-# nauka-site
+# はやく現実になりたい！
+## 概要
+ピッカマンVの個人サイトを生成するNuxt.jsプロジェクト
 
-## Build Setup
+## リンク
+- https://www.nauka.moe このリポジトリから生成されるサイト
+- https://nauka.eth.link/ 上記サイトのENS版のリンク
+- https://twitter.com/PikkamanV Twitter
+- https://social.nauka.moe/PikkamanV Pleroma
+- https://github.com/PikkamanV GitHub
 
-```bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## 謝辞
+このプロジェクトではOGP画像の生成に[「きろ字」](https://ola.kironono.com/entry/fonts-kiloji)を利用させていただいています。[ライセンス](/static/font/License.txt)

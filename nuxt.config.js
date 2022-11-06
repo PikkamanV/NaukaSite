@@ -22,7 +22,7 @@ export default {
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: 'https://www.nauka.moe/' },
       { hid: 'og:title', property: 'og:title', content: 'はやく現実になりたい！' },
-      { hid: 'og:description', property: 'og:description', content: '葉鍵とラ！と自作PCのオタク。エロゲーとアニメを見ながら好きな物をプログラミングで作って人生をやっていきたいが、なぜか不労所得がないのでWebやぶろっくちぇーん？の仕事で生活している。さらにソフトウェアエンジニアということになっているが、学位もないのでインディーズエンジニアである。' },
+      { hid: 'og:description', property: 'og:description', content: '技術的だったりじゃなかったりするトピックについて書くピッカマンVのえっちな個人サイト' },
       { hid: 'og:image', property: 'og:image', content: 'http://localhost:3000/ogp/common/title.png' },
       { name: 'twitter:card', content: 'summary' },
       {
