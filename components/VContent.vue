@@ -20,38 +20,42 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from '@nuxtjs/composition-api'
+import { Post } from '@/composables/post'
+
 import VTag from '~/components/VTag.vue'
-export default {
+export default defineComponent({
   components: {
     VTag
   },
   props: {
     post: {
-      type: Object,
+      type: Object as () => Post,
       required: true
     },
     prev: {
-      type: Object,
+      type: Object as () => Post,
       required: false,
       default: null
     },
     next: {
-      type: Object,
+      type: Object as () => Post,
       required: false,
       default: null
     }
   },
-  methods: {
-    formatDate (date) {
+  setup () {
+    const formatDate = (date: Date) => {
       return new Date(date).toLocaleDateString('ja')
     }
+    return { formatDate }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/styles/color.scss';
+@import '@/assets/styles/color.scss';
 
 .content-container {
   margin: 0 0.5rem;

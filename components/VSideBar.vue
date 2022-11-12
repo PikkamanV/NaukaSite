@@ -18,27 +18,32 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent, reactive } from '@nuxtjs/composition-api'
 import VTitle from '~/components/VTitle.vue'
 
-export default {
+type Item = {
+  name: string
+  url: string
+}
+
+export default defineComponent({
   components: {
     VTitle
   },
-  data () {
-    return {
-      items: [
-        { name: 'Twitter', url: 'https://twitter.com/PikkamanV' },
-        { name: 'GitHub', url: 'https://github.com/PikkamanV' },
-        { name: 'VRChat', url: 'https://vrchat.com/home/user/usr_b130543d-a1e6-4330-906e-a6bddde335c2' }
-      ]
-    }
+  setup () {
+    const items:Item[] = reactive([{ name: 'Twitter', url: 'https://twitter.com/PikkamanV' },
+      { name: 'GitHub', url: 'https://github.com/PikkamanV' },
+      { name: 'VRChat', url: 'https://vrchat.com/home/user/usr_b130543d-a1e6-4330-906e-a6bddde335c2' }
+    ])
+
+    return { items }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/styles/color.scss';
+@import '@/assets/styles/color.scss';
 
 .side-bar-container {
   margin: 0 0.5rem;

@@ -29,34 +29,34 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent, computed } from '@nuxtjs/composition-api'
+import { Post } from '@/composables/post'
 import VTag from '~/components/VTag.vue'
 
-export default {
+export default defineComponent({
   components: {
     VTag
   },
   props: {
     post: {
-      type: Object,
+      type: Object as () => Post,
       required: true
     }
   },
-  computed: {
-    tags () {
-      return this.post.tags
-    }
-  },
-  methods: {
-    formatDate (date) {
+  setup (props) {
+    const tags = computed(() => props.post.tags)
+    const formatDate = (date: Date) => {
       return new Date(date).toLocaleDateString('ja')
     }
+
+    return { tags, formatDate }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/styles/color.scss';
+@import '@/assets/styles/color.scss';
 
 .card-container {
   margin: 0 0.5rem 1rem 0.5rem;

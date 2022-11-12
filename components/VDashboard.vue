@@ -9,23 +9,25 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from '@nuxtjs/composition-api'
+import { Post } from '@/composables/post'
 import VCardList from '~/components/VCardList.vue'
-export default {
+export default defineComponent({
   components: {
     VCardList
   },
   props: {
     posts: {
-      type: Array,
+      type: Array as () => Post[],
       required: true
     }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/styles/color.scss';
+@import '@/assets/styles/color.scss';
 
 .footer {
   display: flex;

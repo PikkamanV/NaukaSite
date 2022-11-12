@@ -19,23 +19,26 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from '@nuxtjs/composition-api'
+import { Post } from '@/composables/post'
+
+export default defineComponent({
   props: {
     prev: {
-      type: Object,
+      type: Object as () => Post,
       default: () => null
     },
     next: {
-      type: Object,
+      type: Object as () => Post,
       default: () => null
     }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/styles/color.scss';
+@import '@/assets/styles/color.scss';
 
 .prev-next-container {
   display: grid;

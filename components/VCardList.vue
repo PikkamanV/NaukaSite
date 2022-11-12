@@ -6,17 +6,20 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from '@nuxtjs/composition-api'
+import { Post } from '@/composables/post'
+
 import VCard from '~/components/VCard.vue'
-export default {
+export default defineComponent({
   components: {
     VCard
   },
   props: {
     posts: {
-      type: Array,
+      type: Array as () => Post[],
       required: true
     }
   }
-}
+})
 </script>

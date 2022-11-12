@@ -16,7 +16,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import '~/assets/styles/color.scss';
+@import '@/assets/styles/color.scss';
 
 .menu-container {
   display: grid;

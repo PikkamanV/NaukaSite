@@ -9,13 +9,14 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from '@nuxtjs/composition-api'
 import VMenu from '~/components/VMenu.vue'
-export default {
+export default defineComponent({
   components: {
     VMenu
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
