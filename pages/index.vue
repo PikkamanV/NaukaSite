@@ -5,25 +5,23 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent, useAsync, useContext } from '@nuxtjs/composition-api'
+import { fetchPosts } from '@/composables/post'
+
 import VDashboard from '~/components/VDashboard.vue'
 import VSideBar from '~/components/VSideBar.vue'
-export default {
+export default defineComponent({
   components: {
     VDashboard,
     VSideBar
   },
-  async asyncData ({ $content, params }) {
-    const posts = await $content('posts', params.slug)
-      .limit(5)
-      .only(['title', 'description', 'img', 'slug', 'createdAt', 'tags'])
-      .sortBy('createdAt', 'desc')
-      .fetch()
-    return {
-      posts
-    }
+  setup () {
+    const { $content } = useContext()
+    const posts = useAsync(() => fetchPosts($content, undefined, 5))
+    return { posts }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

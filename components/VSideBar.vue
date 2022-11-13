@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from '@nuxtjs/composition-api'
+import { defineComponent, ref } from '@nuxtjs/composition-api'
 import VTitle from '~/components/VTitle.vue'
 
 type Item = {
@@ -32,10 +32,10 @@ export default defineComponent({
     VTitle
   },
   setup () {
-    const items:Item[] = reactive([{ name: 'Twitter', url: 'https://twitter.com/PikkamanV' },
+    const items = ref([{ name: 'Twitter', url: 'https://twitter.com/PikkamanV' },
       { name: 'GitHub', url: 'https://github.com/PikkamanV' },
       { name: 'VRChat', url: 'https://vrchat.com/home/user/usr_b130543d-a1e6-4330-906e-a6bddde335c2' }
-    ])
+    ] as Item[])
 
     return { items }
   }
