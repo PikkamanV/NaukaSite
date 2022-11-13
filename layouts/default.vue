@@ -6,19 +6,21 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from '@nuxtjs/composition-api'
 import AppHeader from '~/components/AppHeader.vue'
 import AppFooter from '~/components/AppFooter.vue'
-export default {
+
+export default defineComponent({
   components: {
     AppHeader,
     AppFooter
   }
-}
+})
 </script>
 
 <style lang="scss">
-@import '~/assets/styles/color.scss';
+@import '@/assets/styles/color.scss';
 
 html {
   box-sizing: border-box;
